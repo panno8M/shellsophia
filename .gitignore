@@ -1,0 +1,8 @@
+bin/
+
+tests/*
+!tests/*.*
+tests/*.exe
+
+nimble.develop
+nimble.paths
