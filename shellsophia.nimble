@@ -6,8 +6,6 @@ description   = "Famous commands over Nim syntax"
 license       = "MIT"
 srcDir        = "src"
 installExt    = @["nim"]
-namedBin      = {"shellsophia/generator": "shellsophia-generator"}.toTable
-binDir        = "bin"
 
 
 # Dependencies
