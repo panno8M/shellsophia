@@ -105,6 +105,6 @@ proc c2nim*(shell: ShellEnv; args: C2NimArgs): ShellEnv {.discardable.} =
   if args.exportdll.len != 0:
     a.add "--exportdll:" & args.exportdll
   result = shell.exec("c2nim", a)
-  if args.postprocess != nil:
+  if args.postprocess != nil and args.out.fileExists:
     args.out.writeFile args.postprocess(readFile(args.out).parseString(newIdentCache(), newConfigRef())).renderTree()
   removeDir "tmp"
